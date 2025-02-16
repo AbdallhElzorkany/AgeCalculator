@@ -1,0 +1,133 @@
+:root {
+  --Purple: hsl(259, 100%, 65%);
+  --Light-red: hsl(0, 100%, 67%);
+  --Off-white: hsl(0, 0%, 94%);
+  --Light-grey: hsl(0, 0%, 86%);
+  --Smokey-grey: hsl(0, 1%, 44%);
+  --Off-black: hsl(0, 0%, 8%);
+  --input-size: 32px;
+  --font: "Poppins", serif;
+  /* Weights: 400i, 700, 800i */
+  /* 
+  white
+- Mobile: 375px
+- Desktop: 1440px
+  */
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: var(--font);
+}
+body {
+  background-color: var(--Light-grey);
+  position: relative;
+  width: 100%;
+  height: 100vh;
+}
+.parent {
+  width: 650px;
+  height: 650px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 50px;
+  border-radius: 20px 20px 200px 20px;
+}
+.inputs {
+  padding: 20px 0;
+  border-bottom: 1px solid var(--Light-grey);
+  display: flex;
+  width: 550px;
+  justify-content: flex-start;
+  position: relative;
+}
+.inputs div{
+  position: relative;
+}
+.inputs p{
+  position: absolute;
+  bottom: -2px;
+  left: 2px;
+  font-weight: 400;
+  font-style: italic;
+  color: var(--Light-red);
+  font-size: 12px;
+  display: none;
+}
+.inputs label{
+  position: absolute;
+  top: -25px;
+  left: 2px;
+  color: var(--Smokey-grey);
+}
+.inputs input {
+  padding: 10px 15px;
+  width: 150px;
+  border: 1px solid var(--Light-grey);
+  border-radius: 5px;
+  margin-right: 30px;
+  margin-bottom: 20px;
+  caret-color: var(--Purple);
+  color: var(--Off-black);
+  font-size: var(--input-size);
+}
+.inputs input:focus {
+  outline: none;
+  border-color: var(--Purple);
+}
+button {
+  position: absolute;
+  background-color: var(--Purple);
+  cursor: pointer;
+  border-radius: 50%;
+  border: none;
+  padding: 15px;
+  bottom: -28.455px;
+  right: 0;
+}
+button img {
+  width: 25px;
+}
+button:hover {
+  background-color: var(--Off-black);
+}
+.outputs{
+  font-weight: 800;
+  font-style: italic;
+  font-size: 68px;
+  margin: 50px 0;
+  display: flex;
+  flex-flow: column nowrap;
+}
+.outputs span{
+  color: var(--Purple);
+}
+@media (max-width:992px ) {
+.parent{
+  width: 95%;
+  height: 75%;
+  padding: 20px 15px;
+}
+.inputs{
+  width: 100%;
+  padding: 50px 0;
+  justify-content: center;
+}
+.inputs input{
+  font-size: 26px;
+}
+.inputs div ,.inputs div *{
+  width: 95%;
+}
+.outputs{
+  font-size: 48px;
+  margin: 35px 0;
+}
+.inputs p{
+  bottom: -15px;
+}
+}
